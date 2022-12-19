@@ -1,0 +1,134 @@
+.toggle {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 100px auto;
+  background: linear-gradient(aqua, skyblue);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.toggle.night {
+  background: linear-gradient(midnightblue, rebeccapurple);
+}
+.notch {
+  width: 25px;
+  height: 25px;
+  background-color: yellow;
+  box-shadow: 0 0 5px yellow;
+  border-radius: 50%;
+  position: absolute;
+  /* top: 5px; */
+  left: 2px;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle .icons__moon {
+    display: none;
+}
+.toggle.night .icons__moon {
+    display: block;
+}
+
+.icons__moon:nth-child(1) {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 50%;
+  left: 70%;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.icons__moon:nth-child(2) {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: relative;
+  top: -5%;
+  left: 10%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.icons__moon:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -15%;
+  left: 20%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.night > .notch {
+  background-color: whitesmoke;
+  box-shadow: 0 0 5px whitesmoke;
+  transform: translate(30px, 0);
+}
+
+.shape {
+  position: absolute;
+  background: yellow;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#sm {
+  position: absolute;
+  height: 1.5px;
+  width: 10px;
+  top: 50%;
+  left: 70%;
+  z-index: 3;
+}
+#md {
+  position: absolute;
+  height: 3.5px;
+  width: 13px;
+  top: 18%;
+  left: 45%;
+}
+#lg {
+  position: absolute;
+  height: 3.5px;
+  width: 15px;
+  top: 70%;
+  left: 40%;
+  z-index: 1;
+}
+.night #sm {
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  top: 50%;
+  left: 10%;
+  z-index: 3;
+  transform: translate(17px, 0);
+}
+.night #sm:first-of-type {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-20px, -10px);
+}
+.night #md {
+  height: 5px;
+  width: 5px;
+  top: 20%;
+  left: 45%;
+  border-radius: 50%;
+}
+.night #lg {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  top: 70%;
+  left: 25%;
+  z-index: 1;
+}
